@@ -67,7 +67,8 @@ h1 {
 }
 
 .img-wrap img {
-  width: 400px;
+  max-width: 50%;
+  max-height: 50%;
 }
 
 .product-details {
@@ -106,10 +107,34 @@ h1 {
   width: 100%;
 }
 
-.logo-wrap {
-  width: 120px;
-  height: 120px;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #8c8383;
+  padding: 16px;
+  height: 75px;
 }
+
+.navbar img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  margin-right: 16px;
+}
+
+.navbar button {
+  background-color: black;
+  border: none;
+  padding: 8px 16px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.navbar button:hover {
+  background-color: #826d6d;
+}
+
 
 .products-link {
   text-align: center;
@@ -146,6 +171,7 @@ h1 {
 
 .grid-wrap {
   display: flex;
+  background-color:blue;
   justify-content: flex-start;
   gap: 16px;
   flex-wrap: wrap;
@@ -180,11 +206,13 @@ h1 {
 .product-item button {
   width: 100%;
 }
+
 .product-image {
   flex: 1;
   height: 100px;
   max-width: 100px;
 }
+
 .product-container {
   align-content: 'center';
   border-bottom: 1px solid #ddd;
@@ -201,4 +229,12 @@ h1 {
 .remove-button {
   flex: 1;
   margin: auto;
+}
+.productList{
+
+  display: flex;
+  justify-content: flex-start;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 16px;
 }
