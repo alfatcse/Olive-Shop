@@ -1,11 +1,16 @@
 <template>
   <div class="product-container" :key="product.id" v-for="product in products">
-    <img class="product-image" :src="product.imageName" />
+    <img class="product-image" :src="product.imageUrl" />
     <div class="details-warp">
       <h3>{{ product.name }}</h3>
       <p>{{ product.price }}</p>
     </div>
-    <button class="remove-button">Remove from Cart</button>
+    <button
+      @click="$emit('remove-from-cart', product.id)"
+      class="remove-button"
+    >
+      Remove from Cart
+    </button>
   </div>
 </template>
 <script>
